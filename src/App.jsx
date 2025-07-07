@@ -1,10 +1,11 @@
+import { StockContextProvider } from "./context/StockContext";
+import router from "./routes";
+import { RouterProvider } from "react-router-dom";
 export default function App() {
   return (
-    <>
-      <div className="bg-[#242424]">
-          <h1 className="text-red-800">Hello World</h1>
-      </div>
-    </>
+    <StockContextProvider>
+      <RouterProvider router={router}/>
+    </StockContextProvider>
   )
 }
 
